@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default Theme */
+:root[data-theme='default'] {
+  --primary-hue: 199;
+  --primary-color: hsl(var(--primary-hue) 89% 48%);
+  --primary-light: hsl(var(--primary-hue) 89% 60%);
+  --primary-dark: hsl(var(--primary-hue) 89% 38%);
+  --primary-bg: hsl(var(--primary-hue) 0% 100%);
+  --primary-text: hsl(var(--primary-hue) 0% 10%);
+}
+
+/* Swiggy Theme */
+:root[data-theme='swiggy'] {
+  --primary-hue: 28;
+  --primary-color: hsl(var(--primary-hue) 96% 54%);
+  --primary-light: hsl(var(--primary-hue) 96% 65%);
+  --primary-dark: hsl(var(--primary-hue) 96% 44%);
+  --primary-bg: hsl(var(--primary-hue) 0% 100%);
+  --primary-text: hsl(var(--primary-hue) 0% 10%);
+}
+
+/* Zomato Theme */
+:root[data-theme='zomato'] {
+  --primary-hue: 354;
+  --primary-color: hsl(var(--primary-hue) 84% 63%);
+  --primary-light: hsl(var(--primary-hue) 84% 73%);
+  --primary-dark: hsl(var(--primary-hue) 84% 53%);
+  --primary-bg: hsl(var(--primary-hue) 0% 100%);
+  --primary-text: hsl(var(--primary-hue) 0% 10%);
+}
+
+/* Uber Eats Theme */
+:root[data-theme='ubereats'] {
+  --primary-hue: 154;
+  --primary-color: hsl(var(--primary-hue) 94% 38%);
+  --primary-light: hsl(var(--primary-hue) 94% 48%);
+  --primary-dark: hsl(var(--primary-hue) 94% 28%);
+  --primary-bg: hsl(var(--primary-hue) 0% 100%);
+  --primary-text: hsl(var(--primary-hue) 0% 10%);
+}
+
+/* YouTube Theme */
+:root[data-theme='youtube'] {
+  --primary-hue: 0;
+  --primary-color: hsl(var(--primary-hue) 100% 50%);
+  --primary-light: hsl(var(--primary-hue) 100% 60%);
+  --primary-dark: hsl(var(--primary-hue) 100% 40%);
+  --primary-bg: hsl(var(--primary-hue) 0% 100%);
+  --primary-text: hsl(var(--primary-hue) 0% 10%);
+}
+
+/* Dark mode overrides */
+.dark[data-theme='default'] {
+  --primary-bg: hsl(var(--primary-hue) 15% 15%);
+  --primary-text: hsl(var(--primary-hue) 0% 90%);
+}
+
+.dark[data-theme='swiggy'] {
+  --primary-bg: hsl(var(--primary-hue) 15% 15%);
+  --primary-text: hsl(var(--primary-hue) 0% 90%);
+}
+
+.dark[data-theme='zomato'] {
+  --primary-bg: hsl(var(--primary-hue) 15% 15%);
+  --primary-text: hsl(var(--primary-hue) 0% 90%);
+}
+
+.dark[data-theme='ubereats'] {
+  --primary-bg: hsl(var(--primary-hue) 15% 15%);
+  --primary-text: hsl(var(--primary-hue) 0% 90%);
+}
+
+.dark[data-theme='youtube'] {
+  --primary-bg: hsl(var(--primary-hue) 15% 15%);
+  --primary-text: hsl(var(--primary-hue) 0% 90%);
+}
+
+/* Theme utility classes */
+.text-theme-primary {
+  color: var(--primary-color);
+}
+
+.bg-theme-primary {
+  background-color: var(--primary-color);
+}
+
+.border-theme-primary {
+  border-color: var(--primary-color);
+}
+
+.hover\:bg-theme-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.hover\:text-theme-primary:hover {
+  color: var(--primary-color);
+}
+
+.bg-theme {
+  background-color: var(--primary-bg);
+}
+
+.text-theme {
+  color: var(--primary-text);
+}
+
+/* Transitions */
+.theme-transition {
+  transition-property: color, background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
